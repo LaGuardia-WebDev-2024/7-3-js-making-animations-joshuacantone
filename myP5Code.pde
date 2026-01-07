@@ -5,6 +5,11 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
+var redValue = 82;
+var gValue = 222;
+var bValue = 240;
+
+var ladybugX = 10;
 
 
 //🟢Draw Function - Runs on Repeat
@@ -12,7 +17,7 @@ draw = function(){
   noStroke(); 
   
   // the beautiful blue sky
-  background(82, 222, 240);
+  background(redValue, gValue, bValue);
     
   // The sun, a little circle on the horizon
   fill(255, 204, 0);
@@ -24,7 +29,17 @@ draw = function(){
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
+  ellipse(ladybugX, 350, 10, 10);
+
+  sunSize++;
+  redValue++;
+  gValue--;
+  if (bValue > 100)
+  {
+      bValue--;
+  }
+
+  ladybugX++;
 }
 
 
@@ -34,7 +49,7 @@ draw = function(){
 
 //🟡Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
 void mousePressed(){
-
+  
   
 }
 
